@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/xn----8sbokbjciun4bd.xn--p1ai/webstat"
+AuthUserFile /var/www/kupiklienta/data/etc/1198306.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>
