@@ -14,7 +14,7 @@ $keyPath = Join-Path $sshDir 'pirates_ed25519'
 if (-not (Test-Path -LiteralPath $keyPath)) {
     $psi = New-Object System.Diagnostics.ProcessStartInfo
     $psi.FileName = 'ssh-keygen'
-    $psi.Arguments = "-q -t ed25519 -C 'Pirates Project Key' -f `"$keyPath`""
+    $psi.Arguments = "-q -t ed25519 -f `"$keyPath`""
     $psi.UseShellExecute = $false
     $psi.RedirectStandardInput = $true
     $psi.RedirectStandardOutput = $true
