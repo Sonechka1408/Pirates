@@ -2185,9 +2185,10 @@ input.seachslider {
   width: 160px;
   height: 70px;
   display: block;
-  background: url(../images/logo.png) center no-repeat;
+  background: url(../images/robot-logo.png) center no-repeat;
   background-size: contain;
 }
+.call-btn { width: 56px; height: 56px; display:inline-block; background:url(../images/phone-drawn.png) center/100% 100% no-repeat; }
 
 .header-phone {
   position: relative;

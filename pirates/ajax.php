@@ -31,6 +31,30 @@ switch ($task) {
 			$query = 'insert into orders (name, email, phone, subscribe_id, template_id, referer, date, `session_id`, `note`) values ("' . $name . '", "' . $email . '", "' . $phone . '", ' . $subscribe_id . ', ' . $template_id . ', "' . $referer . '", NOW(), \'' . session_id() . '\', "' . $note . '")';
 			mysql_query($query);
 			$order_id        = mysql_insert_id();
+			
+			// Отправляем заявку в Telegram бот
+			$telegram_data = array(
+				'name' => $name,
+				'phone' => $phone,
+				'email' => $email,
+				'service_type' => 'Заявка с формы сайта',
+				'application_id' => 'FORM_' . $order_id,
+				'conversation_summary' => 'Клиент оставил заявку через всплывающую форму на сайте'
+			);
+			
+			// Отправляем в Telegram бот
+			$telegram_url = 'http://localhost:5000/webhook/application';
+			$telegram_json = json_encode($telegram_data);
+			
+			$telegram_context = stream_context_create(array(
+				'http' => array(
+					'method' => 'POST',
+					'header' => 'Content-Type: application/json',
+					'content' => $telegram_json
+				)
+			));
+			
+			@file_get_contents($telegram_url, false, $telegram_context);
 			$query           = 'select value from settings where name = "qtsms_host"';
 			$res             = mysql_query($query);
 			$qtsms_host      = mysql_result($res, 0);

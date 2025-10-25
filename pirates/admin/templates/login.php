@@ -12,8 +12,8 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/default.js"></script>
 	</head>
-	<body>
-		<div class="container">
+    <body style="background:#1F1E1E url('/assets/images/welcome-bg.png') top center no-repeat; background-size: cover;">
+        <div class="container" style="padding-top:80px;">
 			<form class="form-signin form" method="post" role="form">
 				<h2 class="form-signin-heading">Авторизация</h2>
 				<div class="form-group">

@@ -4,22 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/pirates/assets/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/pirates/assets/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/pirates/assets/icons/favicon-16x16.png">
-	<link rel="manifest" href="/pirates/assets/icons/site.webmanifest">
-	<link rel="mask-icon" href="/pirates/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/pirates/assets/icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/icons/site.webmanifest">
+	<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/assets/icons/favicon.ico">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-config" content="/pirates/assets/icons/browserconfig.xml">
+	<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
 	<meta property="og:title" content="Pirats.studio"/>
 	<meta property="og:description" content="Рисованные сайты с неприличным результатом"/>
-	<meta property="og:image" content="/pirates/assets/images/welcome-slide2.png">
+	<meta property="og:image" content="/assets/images/welcome-slide2.png">
 	<meta property="og:url" content= "http://pirats.studio/" />
 
-	<link href="/pirates/assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
     <script>
 		<?php echo $js; ?>
     </script>
@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="root">
-	<section class="header">
+    <section class="header">
 		<div class="container">
 			<div class="header-wrap">
 				<div class="robot-badge" title="Стартапус"></div>
@@ -36,17 +36,32 @@
 			</div>
 		</div>
 	</section>
+
+<!-- Chat Bot -->
+<button class="discuss-btn" id="discussBtn" aria-label="Обсудить проект">Обсудить проект</button>
+<div class="chat-overlay" id="chatOverlay">
+  <div class="chat-window" role="dialog" aria-modal="true" aria-label="Обсудить проект">
+    <button class="chat-close" id="chatClose" aria-label="Закрыть">×</button>
+    <div class="chat-messages" id="chatMessages">
+      <!-- Сообщения будут добавляться динамически -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Опишите задачу..." />
+      <button class="btn btn--blue" id="chatSend">Отправить</button>
+    </div>
+  </div>
+</div>
 	<section class="welcome">
 		<div class="container">
 			<div class="welcome-slider js-sliderWelcome">
 				<div class="slide welcome-slide">
-					<img src="/pirates/assets/images/welcome-slide2.png" alt="">
+					<img src="/assets/images/welcome-slide2.png" alt="">
 				</div>
 				<div class="slide welcome-slide">
-					<img src="/pirates/assets/images/welcome-slide3.png" alt="">
+					<img src="/assets/images/welcome-slide3.png" alt="">
 				</div>
 				<div class="slide welcome-slide">
-					<img src="/pirates/assets/images/welcome-slide4.png" alt="">
+					<img src="/assets/images/welcome-slide4.png" alt="">
 				</div>
 			</div>
 			<div class="welcome-dudes"></div>
@@ -169,7 +184,7 @@
 			<div class="team-slider js-sliderTeam">
 				<div class="slide">
 					<div class="team-slide">
-						<img src="/pirates/assets/images/team-photo1.png" alt="" class="team-slide__img">
+						<img src="/assets/images/team-photo1.png" alt="" class="team-slide__img">
 						<div class="team-slide__desc">
 							<div class="team-slide__name">Дмитрий Лукьян</div>
 							<div class="team-slide__prof">маркетолог</div>
@@ -180,7 +195,7 @@
 				</div>
 				<div class="slide">
 					<div class="team-slide">
-						<img src="/pirates/assets/images/team-photo1.png" alt="" class="team-slide__img">
+						<img src="/assets/images/team-photo1.png" alt="" class="team-slide__img">
 						<div class="team-slide__desc">
 							<div class="team-slide__name">Дмитрий Лукьян</div>
 							<div class="team-slide__prof">маркетолог</div>
@@ -191,7 +206,7 @@
 				</div>
 				<div class="slide">
 					<div class="team-slide">
-						<img src="/pirates/assets/images/team-photo1.png" alt="" class="team-slide__img">
+						<img src="/assets/images/team-photo1.png" alt="" class="team-slide__img">
 						<div class="team-slide__desc">
 							<div class="team-slide__name">Дмитрий Лукьян</div>
 							<div class="team-slide__prof">маркетолог</div>
@@ -251,11 +266,12 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="/pirates/assets/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/pirates/assets/js/bootstrap.js"></script>
-<script type="text/javascript" src="/pirates/assets/js/slick.min.js"></script>
-<script type="text/javascript" src="/pirates/assets/js/script.js"></script>
-<script>
+<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/slick.min.js"></script>
+<script type="text/javascript" src="/assets/js/script.js"></script>
+<script type="text/javascript" src="/assets/js/chat-bot.js"></script>
+    <script>
 // Переключение на мобильную версию при ширине менее 800px
 function checkMobileVersion() {
     if (window.innerWidth <= 800) {
@@ -264,11 +280,9 @@ function checkMobileVersion() {
         document.body.classList.remove('mobile-version');
     }
 }
-
-// Проверяем при загрузке и изменении размера окна
 window.addEventListener('load', checkMobileVersion);
 window.addEventListener('resize', checkMobileVersion);
-</script>
+    </script>
 
 </body>
 </html>

@@ -32,12 +32,23 @@
 		<div class="container">
 			<div class="header-wrap">
 				<a href="#" class="header-logo"></a>
-				<div class="header-phone">
-					<div class="header-phone__num"><a href="tel:+79091503444">+7 (909) 150-34-44</a></div>
-				</div>
+				<a href="tel:+79091503444" class="call-btn" aria-label="Позвонить"></a>
 			</div>
 		</div>
 	</section>
+<button class="discuss-btn" id="discussBtn">Обсудить проект</button>
+<div class="chat-overlay" id="chatOverlay">
+  <div class="chat-window">
+    <button class="chat-close" id="chatClose" aria-label="Закрыть">×</button>
+    <div class="chat-messages" id="chatMessages">
+      <!-- Сообщения будут добавляться динамически -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Опишите задачу..." />
+      <button class="btn btn--blue" id="chatSend">Отправить</button>
+    </div>
+  </div>
+</div>
 	<section class="main">
 		<div class="main-cloud"></div>
 		<div class="main-cloud"></div>
@@ -78,6 +89,7 @@
 <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
 <script type="text/javascript" src="/assets/game/js/script.js"></script>
+<script type="text/javascript" src="/assets/js/chat-bot.js"></script>
 <script>
     let wwidth = $(window).width();
     if (wwidth < 980) {
