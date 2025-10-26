@@ -74,6 +74,7 @@ class ChatBot {
     openChat() {
         if (this.overlay) {
             this.overlay.classList.add('show');
+            document.body.classList.add('chat-open');
             if (this.input) {
                 setTimeout(() => this.input.focus(), 300);
             }
@@ -83,6 +84,7 @@ class ChatBot {
     closeChat() {
         if (this.overlay) {
             this.overlay.classList.remove('show');
+            document.body.classList.remove('chat-open');
         }
     }
     

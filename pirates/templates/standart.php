@@ -151,7 +151,7 @@
 			</div>
 			<div class="expa-content">
 				<ul>
-                    <li><p>Мы на рынке <strong>9 лет</strong></p></li>
+                    <li><p>Мы на рынке <strong>20 лет</strong></p></li>
 					<li class="expa-content__sparta"><p>Упаковали более <strong>300 проектов</strong></p></li>
 					<li><p>Ошибались десятки раз, поэтому знаем <strong>что не надо делать</strong> <br>и готовы закуситься на результат</p></li>
 				</ul>
